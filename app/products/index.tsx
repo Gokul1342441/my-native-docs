@@ -28,6 +28,8 @@ export default function Products() {
           <Text className={`text-${segment.color}-500`}>{segment.name}</Text>
       </Link>
     ))}
+    <Text className="text-2xl font-bold text-[#000] mb-4">Releative To Directory</Text>
+    <Link href="../about" className="text-blue-500 text-lg">About</Link>
   </View>
 );
 }
