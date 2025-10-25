@@ -19,7 +19,7 @@ export default function TabsLayout() {
                 tabBarLabel: "Development",
                 tabBarIcon: ({ color }) => <FontAwesome name="deviantart" color={color} size={24} />,
                 // tabBarBadge: "4",
-                title: "Development things..."
+                title: "Development 🧑‍💻"
             }}
         />
         <Tabs.Screen name='expo'
