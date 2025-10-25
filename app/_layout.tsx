@@ -5,7 +5,7 @@ import "../global.css";
 export default function RootLayout() {
   return (
     <>
-    <StatusBar style="dark"/>
+      <StatusBar style="dark" />
       <Stack>
         <Stack.Screen
           name="(tabs)"
@@ -31,6 +31,24 @@ export default function RootLayout() {
             }
           }
         />
+        <Stack.Screen
+          name="(modal)/modal"
+          options={
+            {
+              title: "modal",
+              presentation: "modal"
+            }
+          }
+        />
+        <Stack.Screen
+          name="webmodal"
+          options={{
+            presentation: "transparentModal",
+            animation: "fade",
+            headerShown: false,
+          }}
+        />
+
       </Stack>
     </>
   )

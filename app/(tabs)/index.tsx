@@ -34,6 +34,16 @@ export default function Index() {
       {/* Stack Navigation */}
       <Text className="text-xl font-bold text-[#000]">Stack Navigation</Text>
       <Link href="/stack-home" className="text-blue-500">stacknavicate..</Link>
+
+      {/* Modal Navigagtion */}
+      <Text className="text-xl font-bold text-[#000]">Modal Navigation</Text>
+      <Link href="/modal" className="text-blue-500">open modal</Link>
+      <Link href="/webmodal" className="text-blue-500">open webmodal</Link>
+
+      {/* Platform-Specific Code */}
+      <Text className="text-xl font-bold text-[#000]">Platform Specific Code</Text>
+      <Link href="/psc" className="text-blue-500">Pos</Link>
+
     </View>
   );
 }
