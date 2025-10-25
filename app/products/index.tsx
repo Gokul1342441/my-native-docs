@@ -12,7 +12,6 @@ const CATCH_ALL_SEGMENTS = [
   { id: 3, name: 'Books', category: 'books', color: 'green' },
 ]
 
-console.log(DYNAMIC_ROUTES)
 export default function Products() {
   return (
     <View className="flex-1 items-center justify-center bg-white">
