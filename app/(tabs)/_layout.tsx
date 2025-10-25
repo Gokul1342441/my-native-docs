@@ -4,37 +4,37 @@ import { Tabs } from 'expo-router';
 export default function TabsLayout() {
     return <Tabs screenOptions={
         {
-            tabBarLabelPosition : "below-icon"
+            tabBarLabelPosition: "below-icon"
         }
     }>
         <Tabs.Screen name='index'
             options={{
-                tabBarLabel: "Home",
-                tabBarIcon:({color}) => <FontAwesome name="home" color={color} size={24}/>,
-                title:"Home"
-            }}
-        />
-        <Tabs.Screen name='native'
-            options={{
-                tabBarLabel: "Native",
-                tabBarIcon:({color}) => <FontAwesome name="search" color={color} size={24}/>,
-                title:"Native"
-            }}
-        />
-        <Tabs.Screen name='expo'
-            options={{
-                tabBarLabel: "Expo.go",
-                tabBarIcon:({color}) => <FontAwesome name="user" color={color} size={24}/>,
-                title:"Expo Components"
+                tabBarLabel: "Routes",
+                tabBarIcon: ({ color }) => <FontAwesome name="home" color={color} size={24} />,
+                title: "Routes"
             }}
         />
         <Tabs.Screen name='dev'
             options={{
                 tabBarLabel: "Development",
-                tabBarIcon:({color}) => <FontAwesome name="step-forward" color={color} size={24}/>,
-                tabBarBadge : "4",
-                title:"Development Standards"
+                tabBarIcon: ({ color }) => <FontAwesome name="deviantart" color={color} size={24} />,
+                // tabBarBadge: "4",
+                title: "Development things..."
             }}
         />
+        <Tabs.Screen name='expo'
+            options={{
+                tabBarLabel: "Expo.go",
+                tabBarIcon: ({ color }) => <FontAwesome name="location-arrow" color={color} size={24} />,
+                title: "Expo Components"
+            }}
+        />
+        {/* <Tabs.Screen name='native'
+            options={{
+                tabBarLabel: "Native",
+                tabBarIcon: ({ color }) => <FontAwesome name="connectdevelop" color={color} size={24} />,
+                title: "Native"
+            }}
+        /> */}
     </Tabs>
 }
