@@ -33,7 +33,7 @@ export default function Index() {
 
       {/* Stack Navigation */}
       <Text className="text-xl font-bold text-[#000]">Stack Navigation</Text>
-      <Link href="/stack-home" className="text-blue-500">product 12</Link>
+      <Link href="/stack-home" className="text-blue-500">stacknavicate..</Link>
     </View>
   );
 }
