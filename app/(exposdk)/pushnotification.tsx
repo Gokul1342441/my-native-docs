@@ -4,6 +4,7 @@ import { Text, View } from 'react-native';
 
 export default function pushnotification() {
     const { expoPushToken, notification, error } = useNotification();
+    console.log("🚀 ~ pushnotification ~ expoPushToken:", expoPushToken)
     if(error)<view className='flex-1 items-center justify-center'>fucku</view>
     return (
         <View className='flex-1 items-center justify-center'>

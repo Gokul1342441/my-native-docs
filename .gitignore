@@ -39,6 +39,6 @@ yarn-error.*
 app-example
 
 # generated native folders
-/ios
-/android
+# /ios
+# /android
 push-notification-4914d-firebase-adminsdk-fbsvc-c0b066c08a.json
