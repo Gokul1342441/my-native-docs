@@ -5,7 +5,7 @@ import { Pressable, ScrollView, Text, View } from "react-native";
 const routesPages = [
   { name: "Development Listing", href: "/developmentListing", desc: "View all your development notes" },
   { name: "Form Validation", href: "/formvalidation", desc: "Learn native form validation concepts" },
-  { name: "Mmkv with FingerPrint", href: "/mmkvFingerprint", desc: "Learn Concepts with MMKV store with fingerPrint Access" },
+  // { name: "Mmkv with FingerPrint", href: "/mmkvFingerprint", desc: "Learn Concepts with MMKV store with fingerPrint Access" },
 ];
 
 export default function Dev() {
@@ -18,7 +18,7 @@ export default function Dev() {
           <Pressable
             key={index}
             onPress={() => router.push(item.href as any)}
-            className="bg-white p-4 rounded-2xl border  border-[#d7ddf5] bg-[#e6efff] active:opacity-80"
+            className="p-4 rounded-2xl border  border-[#d7ddf5] bg-[#e6efff] active:opacity-80"
           >
             <Text className="text-lg font-semibold text-gray-900 mb-1">{item.name}</Text>
             <Text className="text-gray-500 text-sm">{item.desc}</Text>

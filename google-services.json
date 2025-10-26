@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "101899573345",
+    "project_id": "push-notification-4914d",
+    "storage_bucket": "push-notification-4914d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101899573345:android:7bec22c2a674f5f0793220",
+        "android_client_info": {
+          "package_name": "dev.expo.mynativedos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2z7D7664PmrK-vmTfr37fs4n8-sVP178"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
