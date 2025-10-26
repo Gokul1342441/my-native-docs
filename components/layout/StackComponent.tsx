@@ -1,7 +1,9 @@
+import { useAuthStore } from "@/store/protected";
 import { Stack } from "expo-router";
 import React from "react";
 
 export const StackComponent = () => {
+  const { isAuthenticated } = useAuthStore()
   return (
     <Stack>
       <Stack.Screen
@@ -22,13 +24,15 @@ export const StackComponent = () => {
           headerStyle: { backgroundColor: "#888" },
         }}
       />
-      <Stack.Screen
-        name="(modal)/modal"
-        options={{
-          title: "modal",
-          presentation: "modal",
-        }}
-      />
+      <Stack.Protected guard={isAuthenticated}>
+        <Stack.Screen
+          name="(modal)/modal"
+          options={{
+            title: "modal",
+            presentation: "modal",
+          }}
+        />
+      </Stack.Protected>
       <Stack.Screen
         name="(modal)/webmodal"
         options={{

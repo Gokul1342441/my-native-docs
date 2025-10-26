@@ -5,6 +5,7 @@ import { Pressable, ScrollView, Text, View } from "react-native";
 const routesPages = [
   { name: "Development Listing", href: "/developmentListing", desc: "View all your development notes" },
   { name: "Form Validation", href: "/formvalidation", desc: "Learn native form validation concepts" },
+  { name: "Mmkv with FingerPrint", href: "/mmkvFingerprint", desc: "Learn Concepts with MMKV store with fingerPrint Access" },
 ];
 
 export default function Dev() {

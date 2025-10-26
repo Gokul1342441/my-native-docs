@@ -1,7 +1,20 @@
-import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { useAuthStore } from "@/store/protected";
+import { Link, router } from "expo-router";
+import { Switch, Text, View } from "react-native";
 
 export default function Index() {
+  const {isAuthenticated, login, logout} = useAuthStore()
+  console.log("🚀 ~ Index ~ isAuthenticated:", isAuthenticated)
+
+  const handleAuthToggle = (value: boolean) => {
+    if (value) {
+      login();
+    } else {
+      logout();
+      // If we're on a protected route, redirect to home
+      router.replace("/");
+    }
+  };
   return (
     <View className="flex-1 items-center justify-center bg-white">
       <Text className="text-3xl font-bold text-[#000] mb-4">
@@ -35,9 +48,21 @@ export default function Index() {
       <Text className="text-xl font-bold text-[#000]">Stack Navigation</Text>
       <Link href="/stack-home" className="text-blue-500">stacknavicate..</Link>
 
+      {/* Protected Routes */}
+      <Text className="text-xl font-bold text-[#000]">Protected Routes</Text>
+      <View className="items-center justify-center">
+      <Switch
+          value={isAuthenticated}
+          onValueChange={handleAuthToggle}
+          trackColor={{ false: '#767577', true: '#81b0ff' }}
+          thumbColor={isAuthenticated ? '#f5dd4b' : '#f4f3f4'}
+        />
+      </View>
+      
+
       {/* Modal Navigagtion */}
       <Text className="text-xl font-bold text-[#000]">Modal Navigation</Text>
-      <Link href="/modal" className="text-blue-500">open modal</Link>
+      <Link href="/modal" className="text-blue-500">{isAuthenticated ? "open modal(Authenticated)" : "open Modal(UnAuthorized)"}</Link>
       <Link href="/webmodal" className="text-blue-500">open webmodal</Link>
 
       {/* Platform-Specific Code */}

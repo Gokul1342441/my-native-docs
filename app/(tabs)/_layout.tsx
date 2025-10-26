@@ -29,12 +29,5 @@ export default function TabsLayout() {
                 title: "Expo Components"
             }}
         />
-        {/* <Tabs.Screen name='native'
-            options={{
-                tabBarLabel: "Native",
-                tabBarIcon: ({ color }) => <FontAwesome name="connectdevelop" color={color} size={24} />,
-                title: "Native"
-            }}
-        /> */}
     </Tabs>
 }
